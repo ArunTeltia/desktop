@@ -1,6 +1,6 @@
-import HelloWorld from 'components/apps/HelloWorld';
 import type { ReactElement } from 'react';
 import styled from 'styled-components';
+import processDirectory from 'utils/processDirectory';
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
@@ -9,5 +9,5 @@ const Title = styled.h1`
 `;
 
 export default function Home(): ReactElement {
-  return <HelloWorld />;
+  return <processDirectory.HelloWorld.Component />;
 }
