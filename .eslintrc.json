@@ -26,10 +26,11 @@
   },
   "plugins": ["@typescript-eslint", "jest", "react", "simple-import-sort"],
   "rules": {
+    "comma-dangle": ["error", "never"],
     "max-lines": ["error", 80],
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "react/jsx-props-no-spreading": "off",
-    "semi":["error","always"],
+    "semi": ["error", "always"],
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": "error"
   },
