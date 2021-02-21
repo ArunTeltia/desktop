@@ -5,13 +5,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "eslint":"eslint ."
+    "eslint": "eslint .",
+    "stylelint":"stylelint **/*.scss"
   },
   "dependencies": {
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "stylelint-config-standard": "^20.0.0"
   },
   "repository": {
     "type": "git",
