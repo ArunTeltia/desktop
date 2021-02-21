@@ -2,7 +2,7 @@ import 'styles/globals.scss';
 
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { name } from 'package.json';
+import { name ,description} from 'package.json';
 import type { ReactElement } from 'react';
 
 export default function MyApp({
@@ -13,6 +13,7 @@ export default function MyApp({
     <>
       <Head>
         <title>{name}</title>
+        <meta name="description" content={description}></meta>
       </Head>
       <Component {...pageProps} />
     </>

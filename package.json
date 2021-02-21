@@ -1,6 +1,7 @@
 {
   "name": "desktop",
   "version": "0.1.0",
+  "description": "Desktop environment in the browser",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
