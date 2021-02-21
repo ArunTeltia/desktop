@@ -1,21 +1,38 @@
-import 'styles/globals.scss';
-
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { name ,description} from 'package.json';
+import { description, name } from 'package.json';
 import type { ReactElement } from 'react';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
-export default function MyApp({
-  Component,
-  pageProps
-}: AppProps): ReactElement {
+const GlobalStyle = createGlobalStyle`
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+`;
+
+const theme = {
+  colors: {
+    primary: '#008000'
+  }
+};
+
+export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
     <>
       <Head>
         <title>{name}</title>
-        <meta name="description" content={description}></meta>
+        <meta name="description" content={description} />
       </Head>
-      <Component {...pageProps} />
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
